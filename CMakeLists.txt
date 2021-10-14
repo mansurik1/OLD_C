@@ -16,4 +16,4 @@ find_package(GTest REQUIRED)
 
 include_directories(${GTEST_INCLUDE_DIRS})
 add_executable(main_test main_test.cpp)
-target_link_libraries(main_test ${GTEST_LIBRARIES} containers pthread)
+target_link_libraries(main_test ${GTEST_LIBRARIES} containers cov pthread)
