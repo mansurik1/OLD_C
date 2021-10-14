@@ -28,6 +28,8 @@ enum ERROR_LIST
 unsigned int finalize_user_input();
 int user_input();
 
+bool input_condition(int);
+
 void add_record(container*, size_t *);
 void sort_array(container*, size_t, bool);
 void print_array(container*, size_t);
