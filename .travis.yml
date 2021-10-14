@@ -15,5 +15,6 @@ install:
 script:
   - cmake CMakeLists.txt
   - make
+  - cppcheck --quiet --error-exitcode=1
 after_success:
   - bash <(curl -s https://codecov.io/bash)
