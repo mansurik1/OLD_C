@@ -21,4 +21,3 @@ script:
   - cmake CMakeLists.txt
   - make
   - cppcheck --quiet --error-exitcode=1 main.c library.c main_test.cpp
-  
