@@ -5,19 +5,20 @@ os:
 compiler:
   - gcc
 install:
- - sudo apt-get install cmake
- - sudo apt-get install libgtest-dev
+ - sudo apt install clang-format
+ - sudo apt install clang-tidy
+ - sudo apt install cppcheck
+ - sudo pip install codecov
+ - sudo apt install cmake
+ - sudo apt install libgtest-dev
  - cd /usr/src/gtest
  - sudo cmake CMakeLists.txt
  - sudo make
  - sudo cp *.a /usr/lib
  - cd -
- - sudo apt install clang-format
- - sudo apt install clang-tidy
- - sudo apt install cppcheck
- - sudo pip install codecov
 script:
   - cd /usr/src/gtest
   - sudo cmake CMakeLists.txt
   - sudo make
+  - ls
   - cppcheck --quiet --error-exitcode=1 main.c library.c main_test.cpp
