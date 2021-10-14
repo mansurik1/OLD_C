@@ -5,6 +5,7 @@ os:
 compiler:
   - gcc
 install:
+  - sudo apt install cppcheck
   - sudo apt-get install cmake
   - sudo apt-get install libgtest-dev
   - cd /usr/src/gtest
@@ -12,10 +13,6 @@ install:
   - sudo make
   - sudo cp *.a /usr/lib
   - cd -
-  - sudo apt install clang-format
-  - sudo apt install clang-tidy
-  - sudo apt install cppcheck
-  - sudo pip install codecov
 script:
   - cmake CMakeLists.txt
   - make
