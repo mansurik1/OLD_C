@@ -5,18 +5,17 @@ os:
 compiler:
   - gcc
 install:
-  - apt install cmake
-  - apt install libgtest-dev
-  - apt install -qq cppcheck
-  - apt install clang-format
-  - apt install clang-tidy
-  - apt install cppcheck
-  - apt install valgrind
-  - make
+  - sudo apt install cmake
+  - sudo apt install libgtest-dev
+  - sudo apt install -qq cppcheck
+  - sudo apt install clang-format
+  - sudo apt install clang-tidy
+  - sudo apt install cppcheck
+  - sudo apt install valgrind
   - cp *.a /usr/lib
   - cd -
 script:
   - cd /usr/src/gtest
-  - cmake CMakeLists.txt
-  - make
+  - sudo cmake CMakeLists.txt
+  - sudo make
   - cppcheck --quiet --error-exitcode=1 main.c library.c main_test.cpp
