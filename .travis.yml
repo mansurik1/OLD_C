@@ -17,6 +17,6 @@ script:
   - cmake CMakeLists.txt
   - make
   - ls
-  - cppcheck --quiet --error-exitcode=1
+  - cppcheck --quiet --error-exitcode=1 main.c library.c
 after_success:
   - bash <(curl -s https://codecov.io/bash)
