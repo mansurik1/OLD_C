@@ -8,6 +8,10 @@ install:
   - sudo apt-get install cmake
   - sudo apt-get install libgtest-dev
   - sudo apt-get install -qq cppcheck
+  - sudo apt install clang-format
+  - sudo apt install clang-tidy
+  - sudo apt install cppcheck
+  - sudo apt install valgrind
   - cd /usr/src/gtest
   - sudo cmake CMakeLists.txt
   - sudo make
