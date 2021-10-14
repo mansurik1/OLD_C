@@ -12,7 +12,6 @@ install:
   - sudo apt install clang-tidy
   - sudo apt install cppcheck
   - sudo apt install valgrind
-  - sudo apt install gcovr
   - cd /usr/src/gtest
   - sudo cmake CMakeLists.txt
   - sudo make
@@ -22,7 +21,4 @@ script:
   - cmake CMakeLists.txt
   - make
   - cppcheck --quiet --error-exitcode=1 main.c library.c main_test.cpp
-  - gcovr -r .. --html -o coverage.html
-artifacts:
-  paths:
-  - coverage.html
+  
