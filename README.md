@@ -1,1 +1,1 @@
-Репозиторий для хранения индивидуальных заданий по курсу C/C++
+https://app.travis-ci.com/mansurik1/TechparkWorks.svg?token=rmTTdwdxyqq7b3GjsUmN&branch=hw-1
