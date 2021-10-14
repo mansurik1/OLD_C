@@ -104,6 +104,15 @@ TEST(SORT, SORT_GROUPING_3)
     free(cont);
 }
 
+TEST(INPUT_CONDITION, IC_1)
+{
+    EXPECT_EQ(input_condition('3'), true);
+    EXPECT_EQ(input_condition('1'), true);
+    EXPECT_EQ(input_condition('2'), true);
+    EXPECT_EQ(input_condition(3), false);
+    EXPECT_EQ(input_condition(49), true);
+}
+
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
