@@ -2,8 +2,7 @@ cmake_minimum_required(VERSION 3.12.4)
 project(Project)
 
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=memory")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
+set(CMAKE_C_CPPCHECK "cppcheck")
 
 set(LIB_SOURCE_FILES library.c)
 add_library(containers STATIC ${LIB_SOURCE_FILES})
@@ -17,4 +16,4 @@ find_package(GTest REQUIRED)
 
 include_directories(${GTEST_INCLUDE_DIRS})
 add_executable(main_test main_test.cpp)
-target_link_libraries(main_test ${GTEST_LIBRARIES} containers pthread)
+target_link_libraries(main_test ${GTEST_LIBRARIES} containers gcov pthread)
