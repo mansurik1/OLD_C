@@ -20,5 +20,6 @@ typedef struct
 } social_media_post;
 
 unsigned int count_relevant_posts(struct tm*, social_media_post*, uint);
+ushort calculate_dates_difference(struct tm*, struct tm*);
 
 #endif
