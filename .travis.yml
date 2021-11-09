@@ -16,6 +16,3 @@ install:
   - cd -
 script:
   - cppcheck --quiet --error-exitcode=1 main.c library.c main_test.cpp
-  - curl -Os https://uploader.codecov.io/latest/linux/codecov
-  - chmod +x codecov
-  - ./codecov -f  <(gcovr -e '.*/.*' -x)
