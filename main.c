@@ -94,6 +94,6 @@ int main()
 
     printf("\nКоличество записей, удовлетворяющих критерию: %d", count_relevant_posts(&current_date, posts_array, num_of_recs));
 
-    free(social_media_post);
+    free(posts_array);
     return 0;
 }
